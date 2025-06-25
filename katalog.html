@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog - ngetehguys</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">ngetehguys</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Daftar</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <section class="katalog-section" data-aos="fade-up">
+    <div class="overlay">
+      <h2>Katalog Es Teh</h2>
+      <div class="filter-search">
+        <select id="filter">
+          <option value="all">Semua</option>
+          <option value="lemon">Teh Lemon</option>
+          <option value="susu">Teh Susu</option>
+          <option value="madu">Teh Madu</option>
+          <option value="less sugar">Teh Less Sugar</option>
+          <option value="coklat">Teh Coklat</option>
+          <option value="sirsak">Teh Sirsak</option>
+          <option value="mangga">Teh Mangga</option>
+          <option value="jambu">Teh Jambu</option>
+          <option value="green tea">Teh Green Tea</option>
+          <option value="cappuccino">Teh Cappuccino</option>
+        </select>
+        <input type="text" id="search" placeholder="Cari produk...">
+      </div>
+      <div id="product-list"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 ngetehguys. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="product.js"></script>
+  <script>
+    AOS.init();
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+</body>
+</html>

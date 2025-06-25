@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - ngetehguys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">ngetehguys</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Daftar</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <section class="checkout-section">
+    <div class="overlay">
+      <h2>Formulir Checkout</h2>
+      <div id="checkout-products" class="checkout-product-list"></div>
+      <h3>Total: <span id="total-price">Rp0</span></h3>
+      <form id="checkout-form">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="telepon" placeholder="No. Telepon" required>
+        <textarea id="alamat" placeholder="Alamat Pengiriman" required></textarea>
+        <button type="submit" class="btn">Kirim via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 ngetehguys. All rights reserved.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

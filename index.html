@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ngetehguys</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">ngetehguys</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="katalog.html">Katalog</a></li>
+      <li><a href="cart.html">Keranjang (<span id="cart-count">0</span>)</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Daftar</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <section class="hero" data-aos="fade-in">
+    <div class="overlay">
+      <h1>ngetehguys</h1>
+      <p>Segarnya es teh dalam setiap tegukan. Yuk, ngeteh dulu!</p>
+      <a href="katalog.html" class="btn">Lihat Menu</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ngetehguys. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="product.js"></script>
+  <script>
+    AOS.init();
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+</body>
+</html>
